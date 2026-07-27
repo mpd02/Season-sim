@@ -10,7 +10,9 @@ public class Main {
     } 
 
     public static void main(String[] args) {
-        double winProb = .55; // probability of winning a single game
+        int runsScored = 778;
+        int runsAllowed = 648;
+        double winProb = Math.pow (runsScored, 2)/(Math.pow(runsScored, 2) + Math.pow(runsAllowed, 2)); // calculate the win probability based on runs scored and allowed
         int numGames = 162; // number of games in a season
         int numSimulations = 10000; // number of simulations
         int playoffThreshold= 90; // threshold for making the playoffs
